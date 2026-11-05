@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Welcome | Ashish Barjatya Associates</title>
+  <meta name="description" content="Welcome to Ashish Barjatya Associates. Residential plots in Omaxe and Godrej townships across Indore. Chat with us on WhatsApp or call +91 93000 24141." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0B1F5C" />
+  <link rel="icon" href="/img/aba-logo.jpeg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ashish Barjatya Associates" />
+  <meta property="og:title" content="Welcome to Ashish Barjatya Associates" />
+  <meta property="og:description" content="Residential plots in Omaxe and Godrej townships across Indore. Authorised channel partner for 20 years." />
+  <meta property="og:image" content="/img/og.jpg" />
+  <link rel="preload" as="image" href="/img/aba-logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Mukta:wght@700&family=Sora:wght@600&display=swap" />
+  <style>
+    :root{--navy:#0B1F5C;--navy-deep:#06123A;--navy-lift:#1A3C9C;--gold:#E0B43C;--gold-soft:rgba(224,180,60,.35);--wa:#25D366;--white:#FFFFFF;--soft:rgba(255,255,255,.8);--head:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;overflow:hidden;background:var(--navy);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased}
+    a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+    /* equal rows above and below keep the brand block in the true centre of the screen */
+    .splash{position:relative;isolation:isolate;display:grid;grid-template-rows:1fr auto 1fr;justify-items:center;min-height:100vh;min-height:100svh;padding:16px 20px calc(16px + env(safe-area-inset-bottom));text-align:center;overflow:hidden;background:radial-gradient(circle at 50% 42%,var(--navy-lift) 0%,var(--navy) 55%,var(--navy-deep) 100%)}
+
+    /* slow gold sweep behind everything */
+    .splash::before{content:"";position:absolute;inset:-50%;z-index:-1;background:conic-gradient(from 0deg at 50% 50%,transparent 0deg,var(--gold-soft) 40deg,transparent 90deg,transparent 180deg,rgba(255,255,255,.08) 220deg,transparent 270deg);animation:spin 9s linear infinite;opacity:.55}
+
+    /* floating gold dust */
+    .dust{position:absolute;inset:0;z-index:-1;pointer-events:none}
+    .dust i{position:absolute;bottom:-12px;width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);opacity:0;animation:float 4.5s linear infinite}
+    .dust i:nth-child(1){left:8%;animation-delay:.1s}
+    .dust i:nth-child(2){left:22%;width:4px;height:4px;animation-delay:1.3s;animation-duration:5.5s}
+    .dust i:nth-child(3){left:37%;animation-delay:.6s;animation-duration:4s}
+    .dust i:nth-child(4){left:55%;width:4px;height:4px;animation-delay:2s}
+    .dust i:nth-child(5){left:68%;animation-delay:.3s;animation-duration:5s}
+    .dust i:nth-child(6){left:82%;width:5px;height:5px;animation-delay:1.6s;animation-duration:4.2s}
+    .dust i:nth-child(7){left:93%;width:4px;height:4px;animation-delay:.9s}
+
+    .brand{grid-row:2}
+
+    /* logo pops in, then gold rings keep pulsing out of it */
+    .badge{position:relative;width:clamp(128px,20vmin,168px);aspect-ratio:1;margin-inline:auto;animation:pop .9s var(--ease) both}
+    .badge::before,.badge::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--gold);animation:ripple 2.2s ease-out infinite .9s;opacity:0}
+    .badge::after{animation-delay:2s}
+    .logo{position:relative;display:block;width:100%;height:100%;padding:10px;border-radius:50%;object-fit:contain;background:var(--white);box-shadow:0 0 0 3px var(--gold),0 18px 50px rgba(0,0,0,.35);animation:bob 3s ease-in-out infinite 1s}
+
+    .welcome{margin:30px 0 0;font-size:13px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);animation:fade .7s var(--ease) both .45s}
+    h1{margin:10px 0 0;font:600 clamp(30px,5.4vw,54px)/1.12 var(--head);letter-spacing:-.03em;text-wrap:balance}
+    h1 span{display:inline-block;animation:rise .8s var(--ease) both}
+    h1 span:nth-child(1){animation-delay:.6s}
+    h1 span:nth-child(2){animation-delay:.72s}
+    h1 span:nth-child(3){animation-delay:.84s}
+    .hindi{margin:12px 0 0;font:700 clamp(20px,2.6vw,28px)/1.35 'Mukta',var(--body);color:var(--gold);animation:fade .8s var(--ease) both 1s}
+
+    /* what happens next, with a countdown bar that fills in step with the redirect */
+    .connect{display:inline-flex;flex-direction:column;align-items:stretch;gap:10px;margin-top:32px;padding:14px 18px 16px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);animation:rise .8s var(--ease) both 1.15s}
+    .connect-row{display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:600}
+    .wa-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--wa);color:var(--white);animation:nudge 1s ease-in-out infinite 1.4s}
+    .wa-icon svg{width:20px;height:20px}
+    .count{display:inline-block;min-width:1ch;color:var(--gold);font-variant-numeric:tabular-nums}
+    .bar{height:4px;border-radius:4px;background:rgba(255,255,255,.15);overflow:hidden}
+    .bar i{display:block;height:100%;width:100%;border-radius:inherit;background:linear-gradient(90deg,var(--gold),var(--wa));transform-origin:left;animation:fill 3s linear both}
+
+    /* the way through if a browser blocks the automatic redirect */
+    .fallback{grid-row:3;align-self:end;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:14px;font-weight:500;color:var(--soft);text-underline-offset:3px;animation:fade .6s both 1.6s}
+    .fallback:hover{color:var(--white)}
+
+    @keyframes spin{to{transform:rotate(1turn)}}
+    @keyframes float{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-105vh);opacity:0}}
+    @keyframes pop{0%{opacity:0;transform:scale(.4) rotate(-12deg)}70%{transform:scale(1.08) rotate(2deg)}100%{opacity:1;transform:none}}
+    @keyframes ripple{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.9)}}
+    @keyframes bob{50%{transform:translateY(-6px)}}
+    @keyframes fade{from{opacity:0}}
+    @keyframes rise{from{opacity:0;transform:translateY(22px)}}
+    @keyframes nudge{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+    @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+    @media (prefers-reduced-motion:reduce){
+      .splash::before,.dust,.badge::before,.badge::after{display:none}
+      .logo,.wa-icon{animation:none}
+      .badge,.welcome,h1 span,.hindi,.connect,.fallback{animation-duration:.01s;animation-delay:0s}
+    }
+  </style>
+</head>
+<body>
+  <main class="splash">
+    <div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="brand">
+      <div class="badge"><img class="logo" src="/img/aba-logo.jpeg" alt="Ashish Barjatya Associates logo" width="168" height="168" /></div>
+      <p class="welcome">Welcome to</p>
+      <h1><span>Ashish</span> <span>Barjatya</span> <span>Associates</span></h1>
+      <p class="hindi" lang="hi">जहाँ सपनों को उनका पता मिलता है</p>
+      <div class="connect" role="status">
+        <div class="connect-row">
+          <span class="wa-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2m0 1.67c4.56 0 8.24 3.68 8.24 8.24s-3.68 8.24-8.24 8.24c-1.5 0-2.97-.4-4.25-1.17l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.56 3.68-8.24 8.24-8.24m-3.4 4.4c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.3 3.78 2.1.84 2.52.67 2.98.63.46-.04 1.48-.6 1.69-1.19.21-.59.21-1.09.15-1.19-.06-.1-.23-.17-.48-.29-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.56.12-.17.25-.65.81-.8.98-.15.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.38.11-.51.11-.11.25-.29.38-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.5z" /></svg></span>
+          <span>Connecting you on WhatsApp in <span class="count" id="count">3</span>s</span>
+        </div>
+        <div class="bar" aria-hidden="true"><i></i></div>
+      </div>
+    </div>
+    <a class="fallback" id="whatsapp" href="https://wa.me/919300024141?text=Hello%2C%20I%20would%20like%20to%20know%20about%20plots%20in%20the%20Omaxe%20and%20Godrej%20townships%20in%20Indore.">Opening WhatsApp&hellip; tap here if it doesn't open</a>
+  </main>
+  <script>
+    var DELAY = 3; // seconds the welcome screen holds before WhatsApp opens
+    var count = document.getElementById('count');
+    var left = DELAY;
+    var tick = setInterval(function () {
+      left -= 1;
+      count.textContent = Math.max(left, 0);
+      if (left <= 0) clearInterval(tick);
+    }, 1000);
+    // replace, not assign: the Back button must not land here and bounce to WhatsApp again
+    setTimeout(function () {
+      location.replace(document.getElementById('whatsapp').href);
+    }, DELAY * 1000);
+  </script>
+</body>
+</html>
