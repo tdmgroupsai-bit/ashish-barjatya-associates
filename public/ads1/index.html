@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Welcome | Ashish Barjatya Associates</title>
-  <meta name="description" content="Welcome to Ashish Barjatya Associates. Residential plots in Omaxe and Godrej townships across Indore. Chat with us on WhatsApp or call +91 93000 24141." />
+  <meta name="description" content="Welcome to Ashish Barjatya Associates. Residential plots in Omaxe and Godrej townships across Indore. Get details and the brochure on WhatsApp or call +91 93000 24141." />
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#0B1F5C" />
   <link rel="icon" href="/img/aba-logo.jpeg" />
@@ -16,16 +16,17 @@
   <link rel="preload" as="image" href="/img/aba-logo.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Mukta:wght@700&family=Sora:wght@600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Mukta:wght@700&family=Sora:wght@600;700&display=swap" />
   <style>
-    :root{--navy:#0B1F5C;--navy-deep:#06123A;--navy-lift:#1A3C9C;--gold:#E0B43C;--gold-soft:rgba(224,180,60,.35);--wa:#25D366;--white:#FFFFFF;--soft:rgba(255,255,255,.8);--head:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+    :root{--navy:#0B1F5C;--navy-deep:#06123A;--navy-lift:#1A3C9C;--gold:#E0B43C;--gold-soft:rgba(224,180,60,.35);--wa:#25D366;--wa-deep:#128C7E;--white:#FFFFFF;--soft:rgba(255,255,255,.8);--muted:rgba(255,255,255,.62);--head:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
     *{box-sizing:border-box}
     html{-webkit-text-size-adjust:100%}
-    body{margin:0;overflow:hidden;background:var(--navy);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased}
-    a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    body{margin:0;overflow-x:hidden;background:var(--navy-deep);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased}
+    a{-webkit-tap-highlight-color:transparent}
+    a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 
     /* equal rows above and below keep the brand block in the true centre of the screen */
-    .splash{position:relative;isolation:isolate;display:grid;grid-template-rows:1fr auto 1fr;justify-items:center;min-height:100vh;min-height:100svh;padding:16px 20px calc(16px + env(safe-area-inset-bottom));text-align:center;overflow:hidden;background:radial-gradient(circle at 50% 42%,var(--navy-lift) 0%,var(--navy) 55%,var(--navy-deep) 100%)}
+    .splash{position:relative;isolation:isolate;display:grid;grid-template-rows:1fr auto 1fr;justify-items:center;min-height:100vh;min-height:100svh;padding:24px 16px calc(16px + env(safe-area-inset-bottom));text-align:center;overflow:hidden;background:radial-gradient(circle at 50% 38%,var(--navy-lift) 0%,var(--navy) 55%,var(--navy-deep) 100%)}
 
     /* slow gold sweep behind everything */
     .splash::before{content:"";position:absolute;inset:-50%;z-index:-1;background:conic-gradient(from 0deg at 50% 50%,transparent 0deg,var(--gold-soft) 40deg,transparent 90deg,transparent 180deg,rgba(255,255,255,.08) 220deg,transparent 270deg);animation:spin 9s linear infinite;opacity:.55}
@@ -41,15 +42,15 @@
     .dust i:nth-child(6){left:82%;width:5px;height:5px;animation-delay:1.6s;animation-duration:4.2s}
     .dust i:nth-child(7){left:93%;width:4px;height:4px;animation-delay:.9s}
 
-    .brand{grid-row:2}
+    .brand{grid-row:2;width:100%;max-width:640px}
 
     /* logo pops in, then gold rings keep pulsing out of it */
-    .badge{position:relative;width:clamp(128px,20vmin,168px);aspect-ratio:1;margin-inline:auto;animation:pop .9s var(--ease) both}
+    .badge{position:relative;width:clamp(112px,18vmin,156px);aspect-ratio:1;margin-inline:auto;animation:pop .9s var(--ease) both}
     .badge::before,.badge::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--gold);animation:ripple 2.2s ease-out infinite .9s;opacity:0}
     .badge::after{animation-delay:2s}
     .logo{position:relative;display:block;width:100%;height:100%;padding:10px;border-radius:50%;object-fit:contain;background:var(--white);box-shadow:0 0 0 3px var(--gold),0 18px 50px rgba(0,0,0,.35);animation:bob 3s ease-in-out infinite 1s}
 
-    .welcome{margin:30px 0 0;font-size:13px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);animation:fade .7s var(--ease) both .45s}
+    .welcome{margin:28px 0 0;font-size:13px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);animation:fade .7s var(--ease) both .45s}
     h1{margin:10px 0 0;font:600 clamp(30px,5.4vw,54px)/1.12 var(--head);letter-spacing:-.03em;text-wrap:balance}
     h1 span{display:inline-block;animation:rise .8s var(--ease) both}
     h1 span:nth-child(1){animation-delay:.6s}
@@ -57,18 +58,38 @@
     h1 span:nth-child(3){animation-delay:.84s}
     .hindi{margin:12px 0 0;font:700 clamp(20px,2.6vw,28px)/1.35 'Mukta',var(--body);color:var(--gold);animation:fade .8s var(--ease) both 1s}
 
-    /* what happens next, with a countdown bar that fills in step with the redirect */
-    .connect{display:inline-flex;flex-direction:column;align-items:stretch;gap:10px;margin-top:32px;padding:14px 18px 16px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);animation:rise .8s var(--ease) both 1.15s}
-    .connect-row{display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:600}
-    .wa-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--wa);color:var(--white);animation:nudge 1s ease-in-out infinite 1.4s}
-    .wa-icon svg{width:20px;height:20px}
-    .count{display:inline-block;min-width:1ch;color:var(--gold);font-variant-numeric:tabular-nums}
-    .bar{height:4px;border-radius:4px;background:rgba(255,255,255,.15);overflow:hidden}
-    .bar i{display:block;height:100%;width:100%;border-radius:inherit;background:linear-gradient(90deg,var(--gold),var(--wa));transform-origin:left;animation:fill 3s linear both}
+    /* quick trust markers */
+    .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px 0 0;padding:0;list-style:none;animation:rise .8s var(--ease) both 1.1s}
+    .chips li{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--soft);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+    .chips li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
 
-    /* the way through if a browser blocks the automatic redirect */
-    .fallback{grid-row:3;align-self:end;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:14px;font-weight:500;color:var(--soft);text-underline-offset:3px;animation:fade .6s both 1.6s}
-    .fallback:hover{color:var(--white)}
+    /* the one action on the page */
+    .offer{margin:30px auto 0;max-width:440px;padding:20px 18px 18px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 60px rgba(3,10,35,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);animation:rise .8s var(--ease) both 1.25s}
+    .offer-title{margin:0;font:700 17px/1.35 var(--head);letter-spacing:-.01em}
+    .offer-sub{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}
+
+    .cta{position:relative;isolation:isolate;display:flex;align-items:center;gap:14px;width:100%;margin-top:16px;padding:12px 18px 12px 12px;border-radius:999px;text-decoration:none;text-align:left;color:var(--white);background:linear-gradient(135deg,#2EE372 0%,var(--wa) 45%,var(--wa-deep) 100%);box-shadow:0 12px 30px rgba(37,211,102,.38),inset 0 1px 0 rgba(255,255,255,.35);overflow:hidden;transition:transform .25s var(--ease),box-shadow .25s var(--ease);animation:glow 2.4s ease-in-out infinite 2s}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(37,211,102,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+    .cta:active{transform:translateY(0) scale(.98)}
+    /* light sweep across the button */
+    .cta::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s ease-in-out infinite 1.8s}
+    .cta-icon{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--white);color:var(--wa-deep);box-shadow:0 4px 12px rgba(0,0,0,.18)}
+    .cta-icon svg{width:26px;height:26px}
+    .cta-text{display:flex;flex-direction:column;flex:1;min-width:0}
+    .cta-text strong{font:700 clamp(15px,4.2vw,17px)/1.25 var(--head);letter-spacing:-.01em}
+    .cta-text small{margin-top:2px;font-size:13px;font-weight:600;opacity:.92}
+    .cta-arrow{flex:none;width:22px;height:22px;transition:transform .25s var(--ease)}
+    .cta:hover .cta-arrow{transform:translateX(4px)}
+
+    .perks{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin:14px 0 0;padding:0;list-style:none;font-size:13px;font-weight:500;color:var(--muted)}
+    .perks li{display:inline-flex;align-items:center;gap:6px}
+    .perks svg{width:14px;height:14px;color:var(--wa)}
+
+    /* a quieter second way to reach us */
+    .call{grid-row:3;align-self:end;display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:20px;padding:0 12px;font-size:14px;font-weight:500;color:var(--soft);text-decoration:none;animation:fade .6s both 1.6s}
+    .call b{color:var(--white);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+    .call:hover b{color:var(--gold)}
+    .call svg{width:16px;height:16px;color:var(--gold)}
 
     @keyframes spin{to{transform:rotate(1turn)}}
     @keyframes float{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-105vh);opacity:0}}
@@ -77,13 +98,19 @@
     @keyframes bob{50%{transform:translateY(-6px)}}
     @keyframes fade{from{opacity:0}}
     @keyframes rise{from{opacity:0;transform:translateY(22px)}}
-    @keyframes nudge{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
-    @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes shine{0%{transform:translateX(-120%)}45%,100%{transform:translateX(120%)}}
+    @keyframes glow{0%,100%{box-shadow:0 12px 30px rgba(37,211,102,.38),0 0 0 0 rgba(37,211,102,.45),inset 0 1px 0 rgba(255,255,255,.35)}50%{box-shadow:0 12px 30px rgba(37,211,102,.38),0 0 0 10px rgba(37,211,102,0),inset 0 1px 0 rgba(255,255,255,.35)}}
+
+    @media (max-width:380px){
+      .offer{padding:16px 12px 14px}
+      .cta{gap:10px;padding:10px 14px 10px 10px}
+      .cta-icon{width:40px;height:40px}
+    }
 
     @media (prefers-reduced-motion:reduce){
-      .splash::before,.dust,.badge::before,.badge::after{display:none}
-      .logo,.wa-icon{animation:none}
-      .badge,.welcome,h1 span,.hindi,.connect,.fallback{animation-duration:.01s;animation-delay:0s}
+      .splash::before,.dust,.badge::before,.badge::after,.cta::after{display:none}
+      .logo,.cta{animation:none}
+      .badge,.welcome,h1 span,.hindi,.chips,.offer,.call{animation-duration:.01s;animation-delay:0s}
     }
   </style>
 </head>
@@ -91,33 +118,42 @@
   <main class="splash">
     <div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="brand">
-      <div class="badge"><img class="logo" src="/img/aba-logo.jpeg" alt="Ashish Barjatya Associates logo" width="168" height="168" /></div>
+      <div class="badge"><img class="logo" src="/img/aba-logo.jpeg" alt="Ashish Barjatya Associates logo" width="156" height="156" /></div>
       <p class="welcome">Welcome to</p>
       <h1><span>Ashish</span> <span>Barjatya</span> <span>Associates</span></h1>
       <p class="hindi" lang="hi">जहाँ सपनों को उनका पता मिलता है</p>
-      <div class="connect" role="status">
-        <div class="connect-row">
-          <span class="wa-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2m0 1.67c4.56 0 8.24 3.68 8.24 8.24s-3.68 8.24-8.24 8.24c-1.5 0-2.97-.4-4.25-1.17l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.56 3.68-8.24 8.24-8.24m-3.4 4.4c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.3 3.78 2.1.84 2.52.67 2.98.63.46-.04 1.48-.6 1.69-1.19.21-.59.21-1.09.15-1.19-.06-.1-.23-.17-.48-.29-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.56.12-.17.25-.65.81-.8.98-.15.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.38.11-.51.11-.11.25-.29.38-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.5z" /></svg></span>
-          <span>Connecting you on WhatsApp in <span class="count" id="count">3</span>s</span>
-        </div>
-        <div class="bar" aria-hidden="true"><i></i></div>
-      </div>
+
+      <ul class="chips" aria-label="Why us">
+        <li>Omaxe &amp; Godrej Townships</li>
+        <li>20 Years Trusted Partner</li>
+        <li>Indore</li>
+      </ul>
+
+      <section class="offer" aria-labelledby="offer-title">
+        <h2 class="offer-title" id="offer-title">Want plot details &amp; the brochure?</h2>
+        <p class="offer-sub">Just ping us on WhatsApp &mdash; we'll share everything with you.</p>
+
+        <a class="cta" href="https://wa.me/919300024141?text=Hello%2C%20please%20share%20more%20details%20and%20the%20brochure%20for%20plots%20in%20the%20Omaxe%20and%20Godrej%20townships%20in%20Indore." target="_blank" rel="noopener">
+          <span class="cta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2m0 1.67c4.56 0 8.24 3.68 8.24 8.24s-3.68 8.24-8.24 8.24c-1.5 0-2.97-.4-4.25-1.17l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.56 3.68-8.24 8.24-8.24m-3.4 4.4c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.3 3.78 2.1.84 2.52.67 2.98.63.46-.04 1.48-.6 1.69-1.19.21-.59.21-1.09.15-1.19-.06-.1-.23-.17-.48-.29-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.56.12-.17.25-.65.81-.8.98-.15.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.38.11-.51.11-.11.25-.29.38-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.5z" /></svg></span>
+          <span class="cta-text">
+            <strong>Get Details &amp; Brochure</strong>
+            <small>Chat with us on WhatsApp</small>
+          </span>
+          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+
+        <ul class="perks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>Free brochure</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>Plot availability</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>Site visit</li>
+        </ul>
+      </section>
     </div>
-    <a class="fallback" id="whatsapp" href="https://wa.me/919300024141?text=Hello%2C%20I%20would%20like%20to%20know%20about%20plots%20in%20the%20Omaxe%20and%20Godrej%20townships%20in%20Indore.">Opening WhatsApp&hellip; tap here if it doesn't open</a>
+
+    <a class="call" href="tel:+919300024141">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" /></svg>
+      Prefer a call? <b>+91 93000 24141</b>
+    </a>
   </main>
-  <script>
-    var DELAY = 3; // seconds the welcome screen holds before WhatsApp opens
-    var count = document.getElementById('count');
-    var left = DELAY;
-    var tick = setInterval(function () {
-      left -= 1;
-      count.textContent = Math.max(left, 0);
-      if (left <= 0) clearInterval(tick);
-    }, 1000);
-    // replace, not assign: the Back button must not land here and bounce to WhatsApp again
-    setTimeout(function () {
-      location.replace(document.getElementById('whatsapp').href);
-    }, DELAY * 1000);
-  </script>
 </body>
 </html>
